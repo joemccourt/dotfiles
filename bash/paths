@@ -1,5 +1,6 @@
 # Macports Setup
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+export MANPATH="/opt/local/share/man:$MANPATH"
 
 # PostgreSQL Setup
 export PATH="/opt/local/lib/postgresql90/bin:$PATH"

@@ -3,6 +3,7 @@ require 'rake'
 $home = ENV['HOME']
 
 task :install do
+  replace_all = false
   skip = %w[Rakefile README.rdoc LICENSE]
   Dir['*'].each do |file|
     next if skip.include? file
@@ -10,7 +11,7 @@ task :install do
     if File.exist?(dotfile)
       if File.identical?(file, dotfile)
         puts "identical #{dotfile}"
-      elsif
+      elsif replace_all
         replace_file(file)
       else
         print "overwrite #{dotfile}? [ynaq] "
