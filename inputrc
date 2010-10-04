@@ -1,0 +1,23 @@
+# Delete key
+"\e[3~": delete-char
+
+# Home and end
+"\e[1~": beginning-of-line
+"\e[4~"; end-of-line
+
+# Ctrl+arrow cursor movement
+"\e[5C": forward-word
+"\e[5D": backward-word
+
+# History completion
+"\e[B": history-search-forward
+"\e[A": history-search-backward
+
+# Case-insensitive completion
+set completion-ignore-case on
+
+# Bell style
+set bell-style none
+
+# Editing mode
+set editing-mode emacs

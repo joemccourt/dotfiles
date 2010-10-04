@@ -4,9 +4,8 @@ $home = ENV['HOME']
 
 task :install do
   replace_all = false
-  skip = %w[Rakefile README.rdoc LICENSE]
   Dir['*'].each do |file|
-    next if skip.include? file
+    next if %w[Rakefile README.rdoc LICENSE].include? file
     dotfile = dotfile_name(file)
     if File.exist?(dotfile)
       if File.identical?(file, dotfile)
