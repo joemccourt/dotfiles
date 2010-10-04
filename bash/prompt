@@ -34,10 +34,11 @@ function promptcmd {
 	
 	cols=`stty size | cut -d' ' -f2` 
 	
-	# Change the length of curdir according to $COLUMNS
+	# Change the length of curdir according to $cols
 	len=$(echo "$left $curdir $right" | wc -c)
 	if [ $len -gt $cols ]; then
-		curdir="...${curdir:$(($len-$cols+2))}"
+	    elip=$(echo -e "\xe2\x80\xa6")
+	    curdir="${elip}${curdir:$(($len-$cols))}"
 	fi
 	# Move the right prompt to the right side
 	len=$(echo "$left $curdir $right" | wc -c)
@@ -48,7 +49,7 @@ function promptcmd {
 	# Add colors
 	user=$(fg_purple $user)
 	host=$(fg_yellow $host)
-	curdir=$(fg_red $curdir)
+	curdir=$(fg_green $curdir)
 	left="$user at $host in $curdir"
 	# Export
 	# export PS1="\[\e[1;32m\]$left $curdir $right\n$\[\e[0m\] "
@@ -57,25 +58,12 @@ function promptcmd {
 }
 
 export PS1="$ "
-export PROMPT_COMMAND=promptcmd
+export PROMPT_COMMAND="promptcmd"
 
 # Resize handler
-# function resized_window {
-# 	out=""
-# 	# Save the cursor position
-# 	out="$out\e[s"
-# 	# Go to the line above the prompt (handle multiple lines?)
-# 	out="$out\e[1A"
-# 	# Go to the beginning of the line
-# 	out="$out\e[${COLUMNS}D"
-# 	# Clear the contents of the line
-# 	out="$out\e[K"
-# 	# Re-echo the prompt
-# 	out="$out$(promptcmd)"
-# 	# Restore the cursor position
-# 	out="$out\e[u\e[2C"
-# 	
-# 	echo -e "$out"
-# }
-# 
+function resized_window {
+    cols=$(stty size)
+    echo -e "\e[1A\e[${cols}D\e[K$(promptcmd)"
+}
+
 # trap resized_window SIGWINCH

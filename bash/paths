@@ -2,22 +2,22 @@
 # PATH configuration
 
 declare -a all_paths=(
-	$(command -p getconf PATH | sed 's/:/ /g')	# System path
-	/bin /sbin /usr/bin /usr/sbin
-	/usr/local/bin /usr/local/sbin
-	/usr/X11R6/bin
-	/opt/local/bin /opt/local/sbin
-	/opt/local/lib/postgresql90/bin
-	${HOME}/bin
+    /opt/local/bin /opt/local/sbin
+    /usr/local/bin /usr/local/sbin
+    /usr/X11R6/bin
+    /bin /sbin /usr/bin /usr/sbin
+    $(command -p getconf PATH | sed 's/:/ /g')	# System path
+    ${HOME}/bin    
+    /opt/local/lib/postgresql90/bin
 )
 
 unset PATH_tmp
 for path in ${all_paths[@]}; do
-	if [[ $(expr "$PATH_tmp" : ".*:$path:.*") -eq 0 ]]; then
-		if [[ -d "$path" ]]; then
-			PATH_tmp="${PATH_tmp}${path}:"
-		fi
+    if [[ $(expr "$PATH_tmp" : ".*:$path:.*") -eq 0 ]]; then
+	if [[ -d "$path" ]]; then
+	    PATH_tmp="${PATH_tmp}${path}:"
 	fi
+    fi
 done
 
 export PATH=$PATH_tmp
