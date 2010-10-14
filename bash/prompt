@@ -12,8 +12,8 @@ for color in $colors; do
 		style=`[ $j = 0 ] && echo "" || echo bold`
 		fname=`[ -z $style ] && echo fg_$color || echo fg_${style}_${color}`
 		fun=`echo 'function' "$fname" '{
-			[ -z $1 ] && return 1;
-			echo -e "\e['"$j;${i}m"'$1'"$(fg_reset)"'";
+			[ -z "$1" ] && return 1;
+			echo -e "\e['"$j;${i}m"'"$1"'"$(fg_reset)"'";
 		}'`
 		eval $fun
 	done
@@ -49,7 +49,7 @@ function promptcmd {
 	# Add colors
 	user=$(fg_purple $user)
 	host=$(fg_yellow $host)
-	curdir=$(fg_green $curdir)
+	curdir=$(fg_green "$curdir")
 	left="$user at $host in $curdir"
 	# Export
 	# export PS1="\[\e[1;32m\]$left $curdir $right\n$\[\e[0m\] "
@@ -67,3 +67,4 @@ function resized_window {
 }
 
 # trap resized_window SIGWINCH
+

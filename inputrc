@@ -21,3 +21,6 @@ set bell-style none
 
 # Editing mode
 set editing-mode emacs
+
+# Show ambiguous completions with one tab
+set show-all-if-ambiguous on
