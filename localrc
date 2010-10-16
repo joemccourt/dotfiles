@@ -1,4 +1,4 @@
-# rvm configuration
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
-   source "$HOME/.rvm/scripts/rvm"
-fi
+#!/usr/bin/env bash
+
+# Add local ruby gems dir to PATH
+export PATH=$HOME/.gem/ruby/1.8/bin:$PATH
