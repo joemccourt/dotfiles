@@ -6,8 +6,8 @@ source ~/.bash/history
 
 export HISTSIZE=100000
 export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignorespace:ignoredups
-export EDITOR="mate -w"
+export HISTCONTROL=ignorespace:erasedups
+export EDITOR=`which emacs`
 
 # Unset shopts (-u)
 shopt -u huponexit	# nohup by default
