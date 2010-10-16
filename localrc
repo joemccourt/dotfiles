@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-# Put local configuration here
+# Add local ruby gems dir to PATH
+export PATH=$HOME/.gem/ruby/1.8/bin:$PATH
