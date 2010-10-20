@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
 
-# Add local ruby gems dir to PATH
-export PATH=$HOME/.gem/ruby/1.8/bin:$PATH
+# Enable extra bash_completion, if installed
+if [ -f /opt/local/etc/bash_completion ] && ! shopt -oq posix; then
+    . /opt/local/etc/bash_completion
+fi
+
+# Enable rvm (Ruby version manager)
+if [[ -s "$HOME/.rvm/scripts/rvm" ]]; then
+    source "$HOME/.rvm/scripts/rvm"
+fi
