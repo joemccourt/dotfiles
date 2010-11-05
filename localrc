@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# Enable rvm (Ruby version manager)
-if [[ -s "/usr/local/lib/rvm" ]]; then
-    source "/usr/local/lib/rvm"
-fi
