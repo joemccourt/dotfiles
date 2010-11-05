@@ -30,8 +30,9 @@ shopt -s checkwinsize   # check window size
 # Set up color output
 export CLICOLOR=1
 
-# For Linux (Arch, Debian, Ubuntu)
-if [ -x `which dircolors` ]; then
+# ls colors for various linux distros
+which -s dircolors 1>/dev/null 2>&1
+if [ $? -eq 0 ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
 #alias dir='dir --color=auto'
