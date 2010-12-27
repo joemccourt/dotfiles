@@ -8,6 +8,8 @@
 # Ctrl+arrow cursor movement
 "\e[5C": forward-word
 "\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
 
 # History completion
 "\e[B": history-search-forward
