@@ -1,5 +1,8 @@
 ; Load extras here
 
+(autoload 'lua-mode "/usr/local/share/emacs/site-lisp/lua-mode.el"
+ "Major mode for Lua." t)
+
 (add-to-list 'load-path "~/.emacs.d/markdown-mode/")
 (autoload 'markdown-mode "markdown-mode.el"
    "Major mode for editing Markdown files" t)
