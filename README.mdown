@@ -1,0 +1,37 @@
+Cameron Spickert's Dot Files
+============================
+
+Forked from [ryanb/dotfiles](https://github.com/ryanb/dotfiles).
+
+Requirements
+------------
+
+1. The latest version of bash (and bash_completion, if desired)
+2. A ruby installation with rake
+
+Installation
+------------
+
+Simply run the following commands:
+
+    git clone --recursive git://github.com/cspicker/dotfiles ~/.dotfiles
+    cd ~/.dotfiles
+    rake install
+
+Environment
+-----------
+
+I have used these files on Mac, Linux and FreeBSD systems. I recommend
+putting any system-specific configuration, as well as anything else you
+don't want in your repo in ~/.localrc. This file will be automatically
+loaded if it exists.
+
+Features
+--------
+
+* A nice prompt
+* Bash history synchronization for multiple shells (via exploiting PROMPT_COMMAND)
+* A place to put emacs config and user-provided bash completions
+* Some helpful aliases (including git)
+* Configuration files for tmux, screen and the python interpreter
+* Mac-friendly inputrc file
