@@ -8,7 +8,6 @@ declare -a all_paths=(
     /bin /sbin /usr/bin /usr/sbin
     $(command -p getconf PATH | sed 's/:/ /g')	# System path
     ${HOME}/bin    
-    /opt/local/lib/postgresql90/bin
 )
 
 unset PATH_tmp
