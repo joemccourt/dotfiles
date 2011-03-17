@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# PATH configuration
 
 declare -a all_paths=(
     /opt/local/bin /opt/local/sbin

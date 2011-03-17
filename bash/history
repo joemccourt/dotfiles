@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-# History configuration
 
 export HISTSIZE=100000
 export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignorespace:ignoredups
+export HISTCONTROL=ignorespace:erasedups
 
 function history {
     _bash_history_sync

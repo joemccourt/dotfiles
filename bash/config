@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
 
-# Set prompt
 source ~/.bash/prompt
 source ~/.bash/history
-
-export HISTSIZE=100000
-export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignorespace:erasedups
-export EDITOR=`which emacs`
 
 # Unset shopts (-u)
 shopt -u huponexit	# nohup by default
@@ -25,22 +19,4 @@ shopt -s checkjobs	# check for running jobs before exiting
 shopt -s checkwinsize   # check window size
 shopt -s extglob        # extended pattern matching
 
-# Set up color output
-export CLICOLOR=1
-
-# ls colors for various linux distros
-which dircolors &>/dev/null
-if [ $? -eq 0 ]; then
-    if [ -r ~/.dircolors ]; then
-	eval "$(dircolors -b ~/.dircolors)"
-    else
-	eval "$(dircolors -b)"
-    fi
-    cmds=(ls dir vdir grep fgrep egrep)
-    for cmd in ${cmds[@]}; do
-	eval "alias $cmd=\"$cmd --color=auto"
-    done
-fi
-
-# Add user-specific bash completions
 export USER_BASH_COMPLETION_DIR=~/.bash_completion.d
