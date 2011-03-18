@@ -3,15 +3,6 @@
 source ~/.bash/prompt
 source ~/.bash/history
 
-<<<<<<< HEAD
-export HISTSIZE=100000
-export HISTFILESIZE=$HISTSIZE
-export HISTCONTROL=ignorespace:erasedups
-export EDITOR=`which emacs`
-export PAGER=less
-
-=======
->>>>>>> master
 # Unset shopts (-u)
 shopt -u huponexit	# nohup by default
 
