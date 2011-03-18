@@ -1,5 +1,5 @@
-Cameron Spickert's Dot Files
-============================
+Cameron's Dot Files
+===================
 
 Forked from [ryanb/dotfiles](https://github.com/ryanb/dotfiles).
 
@@ -7,7 +7,7 @@ Requirements
 ------------
 
 1. The latest version of bash (and bash_completion, if desired)
-2. A ruby installation with rake
+2. A ruby installation with rake (going to change this soon)
 
 Installation
 ------------
@@ -18,13 +18,20 @@ Simply run the following commands:
     cd ~/.dotfiles
     rake install
 
+The install script will create symbolic links to files in your home
+directory (.bashrc, .bash_profile, etc.). If files exist at these
+paths, you will be prompted to handle the conflict by overwriting,
+skipping or aborting the installation.
+
+I recommend moving any existing shell configuration into ~/.localrc,
+which will be sourced if it exists.
+
 Environment
 -----------
 
 I have used these files on Mac, Linux and FreeBSD systems. I recommend
-putting any system-specific configuration, as well as anything else you
-don't want in your repo in ~/.localrc. This file will be automatically
-loaded if it exists.
+putting any system-specific configuration, as well as anything else
+you don't want in your repo in ~/.localrc.
 
 Features
 --------
