@@ -8,6 +8,7 @@ export HISTSIZE=100000
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignorespace:erasedups
 export EDITOR=`which emacs`
+export PAGER=less
 
 # Unset shopts (-u)
 shopt -u huponexit	# nohup by default

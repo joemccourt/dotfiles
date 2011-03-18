@@ -3,14 +3,17 @@ require("awful.autofocus")
 require("awful.rules")
 require("beautiful")
 require("naughty")
+require("freedesktop.menu")
+require("freedesktop.utils")
 
--- {{{ Variable definitions
--- Themes define colours, icons, and wallpapers
+-- Load the theme
 beautiful.init("/usr/local/share/awesome/themes/default/theme.lua")
 
--- This is used later as the default terminal and editor to run.
+-- Use urxvtd/c as terminal
 awful.util.spawn("urxvtd -q -o -f")
 terminal = "urxvtc -sk"
+
+-- Use emacs as editor
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = editor
 
@@ -24,7 +27,6 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
-    awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
@@ -35,7 +37,8 @@ layouts =
     awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier
+    awful.layout.suit.magnifier,
+    awful.layout.suit.floating
 }
 -- }}}
 
