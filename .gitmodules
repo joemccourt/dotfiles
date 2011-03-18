@@ -1,0 +1,3 @@
+[submodule "config/awesome/awesome-freedesktop"]
+	path = config/awesome/awesome-freedesktop
+	url = git://github.com/terceiro/awesome-freedesktop.git
