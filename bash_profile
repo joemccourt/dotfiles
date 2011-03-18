@@ -1,8 +1,5 @@
-source ~/.bash/aliases
-source ~/.bash/completions
-source ~/.bash/paths
-source ~/.bash/config
+#!/usr/bin/env bash
 
-if [ -f ~/.localrc ]; then
-  . ~/.localrc
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
 fi

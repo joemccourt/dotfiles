@@ -1,5 +1,7 @@
-; Load extras here
+;; Cameron Spickert
+;; March 17, 2010
 
+<<<<<<< HEAD
 (autoload 'lua-mode "/usr/local/share/emacs/site-lisp/lua-mode.el"
  "Major mode for Lua." t)
 
@@ -8,25 +10,19 @@
    "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
    (cons '("\\.text" . markdown-mode) auto-mode-alist))
+=======
+;; Tab behavior
+(setq-default standard-indent 2)
+(setq-default indent-tabs-mode nil)
+>>>>>>> master
 
-; Enable mouse scrolling support (with MouseTerm)
-(unless window-system
-  (xterm-mouse-mode 1)
-  (global-set-key [mouse-4] '(lambda ()
-                               (interactive)
-                               (scroll-down 1)))
-  (global-set-key [mouse-5] '(lambda ()
-                               (interactive)
-                               (scroll-up 1))))
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
+;; Backup file behavior
+(setq make-backup-files t)
+(setq version-control t)
+(setq backup-directory-alist (quote ((".*" . "~/.emacs_backups/"))))
+
+;; Show line numbers
+(line-number-mode 1)
+
+;; Fill column setting
+(setq-default fill-column 72)

@@ -1,0 +1,21 @@
+# Emacs
+*~
+\#*#
+
+# Python
+.pyc
+.pyo
+
+# Xcode
+*.pbxuser
+*.perspective
+*.perspective3
+*.mode1v3
+*.mode2v3
+xcuserdata
+
+# Misc
+.DS_Store
+.svn
+*.swp
+.*.swp

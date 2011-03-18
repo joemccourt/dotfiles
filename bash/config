@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 
-# Set prompt
 source ~/.bash/prompt
 source ~/.bash/history
 
+<<<<<<< HEAD
 export HISTSIZE=100000
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignorespace:erasedups
 export EDITOR=`which emacs`
 export PAGER=less
 
+=======
+>>>>>>> master
 # Unset shopts (-u)
 shopt -u huponexit	# nohup by default
 
@@ -24,21 +26,6 @@ shopt -s nocaseglob 	# case-insensitive completion
 shopt -s histverify 	# don't immediately parse history items
 shopt -s checkjobs	# check for running jobs before exiting
 shopt -s checkwinsize   # check window size
+shopt -s extglob        # extended pattern matching
 
-# Unused shopts
-# shopt -s extglob # extended pattern matching
-
-# Set up color output
-export CLICOLOR=1
-
-# ls colors for various linux distros
-which -s dircolors 1>/dev/null 2>&1
-if [ $? -eq 0 ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-#alias dir='dir --color=auto'
-#alias vdir='vdir --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+export USER_BASH_COMPLETION_DIR=~/.bash_completion.d

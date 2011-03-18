@@ -68,4 +68,5 @@ function resized_window {
     echo -e "\e[1A\e[${cols}D\e[K$(promptcmd)"
 }
 
+# Not working yet
 # trap resized_window SIGWINCH
