@@ -1,7 +1,6 @@
 ;; Cameron Spickert
 ;; March 17, 2010
 
-<<<<<<< HEAD
 (autoload 'lua-mode "/usr/local/share/emacs/site-lisp/lua-mode.el"
  "Major mode for Lua." t)
 
@@ -10,11 +9,10 @@
    "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
    (cons '("\\.text" . markdown-mode) auto-mode-alist))
-=======
+
 ;; Tab behavior
 (setq-default standard-indent 2)
 (setq-default indent-tabs-mode nil)
->>>>>>> master
 
 ;; Backup file behavior
 (setq make-backup-files t)
