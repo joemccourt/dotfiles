@@ -1,8 +1,9 @@
 ;; Cameron Spickert
 ;; March 17, 2010
 
-(autoload 'lua-mode "/usr/local/share/emacs/site-lisp/lua-mode.el"
- "Major mode for Lua." t)
+;; Lua mode (nice for awesome/rc.lua)
+(setq auto-mode-alist (cons '("\\.lua$" . lua-mode) auto-mode-alist))
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 
 (add-to-list 'load-path "~/.emacs.d/markdown-mode/")
 (autoload 'markdown-mode "markdown-mode.el"

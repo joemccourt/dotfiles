@@ -5,6 +5,7 @@ source ~/.bash/paths
 source ~/.bash/config
 
 export EDITOR=`which emacs`
+export PAGER=`which less`
 export PYTHONSTARTUP=$HOME/.pystartup
 
 export CLICOLOR=1
