@@ -3,3 +3,6 @@
 *~
 .*.swp
 localrc
+
+config/*
+!config/awesome/
