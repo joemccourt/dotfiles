@@ -18,7 +18,7 @@ if [ $? -eq 0 ]; then
     fi
     cmds=(ls dir vdir grep fgrep egrep)
     for cmd in ${cmds[@]}; do
-	eval "alias $cmd=\"$cmd --color=auto"
+	eval "alias $cmd=\"$cmd --color=auto\""
     done
 fi
 
