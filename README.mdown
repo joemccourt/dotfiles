@@ -6,8 +6,7 @@ Forked from [ryanb/dotfiles](https://github.com/ryanb/dotfiles).
 Requirements
 ------------
 
-1. The latest version of bash (and bash_completion, if desired)
-2. A ruby installation with rake (going to change this soon)
+1. Bash 4+ (and bash_completion, if desired)
 
 Installation
 ------------
@@ -16,7 +15,7 @@ Simply run the following commands:
 
     git clone --recursive git://github.com/cspicker/dotfiles ~/.dotfiles
     cd ~/.dotfiles
-    rake install
+    bash install.bash
 
 The install script will create symbolic links to files in your home
 directory (.bashrc, .bash_profile, etc.). If files exist at these
