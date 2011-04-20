@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
+readonly MIN_BASH_REQUIRED=4
+readonly SCRIPT_DIR=$(dirname $0)
+readonly GLOBIGNORE=*~:.*:README*:Rakefile:$(basename $0)
+
 if [[ ${BASH_VERSINFO[0]} < $MIN_BASH_REQUIRED ]]; then
 	echo -e "Error: bash ${MIN_BASH_REQUIRED}+ required. Your version: $BASH_VERSION"
 	exit 1
 fi
-
-readonly MIN_BASH_REQUIRED=4
-readonly SCRIPT_DIR=$(dirname $0)
-readonly GLOBIGNORE=*~:.*:README*:Rakefile:$(basename $0)
 
 cd "$SCRIPT_DIR"
 
