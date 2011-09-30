@@ -24,3 +24,9 @@
   "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
   (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
+;; Ruby mode
+(autoload 'ruby-mode "ruby-mode.el"
+  "Major mode for editing Ruby files" t)
+(setq auto-mode-alist
+  (cons '("\\.rb" . ruby-mode) auto-mode-alist))
