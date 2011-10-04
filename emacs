@@ -18,6 +18,7 @@
 
 ;; Load path
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/color-theme")
 
 ;; Markdown mode
 (autoload 'markdown-mode "markdown-mode.el"
@@ -30,3 +31,6 @@
   "Major mode for editing Ruby files" t)
 (setq auto-mode-alist
   (cons '("\\.rb" . ruby-mode) auto-mode-alist))
+
+;; Set the color theme
+(load-library "color-theme")
