@@ -26,5 +26,5 @@
 	pager = less -FRSX
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [user]
-	name = Cameron Spickert
-	email = cameron@aviary.com
+	name = Chris Bosco
+	email = chris@aviary.com

@@ -4,7 +4,7 @@ source ~/.bash/aliases
 source ~/.bash/paths
 source ~/.bash/config
 
-export EDITOR=`which emacs`
+export EDITOR=`which vim`
 export PYTHONSTARTUP=$HOME/.pystartup
 
 export CLICOLOR=1
