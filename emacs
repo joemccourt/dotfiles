@@ -33,9 +33,9 @@
   (cons '("\\.rb" . ruby-mode) auto-mode-alist))
 
 ;; Add auto-complete
-(add-to-list 'load-path "/Users/cspickert/.dotfiles/emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete/")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/Users/cspickert/.dotfiles/emacs.d//ac-dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/site-lisp/auto-complete//ac-dict")
 (ac-config-default)
 
 ;; Set the color theme
