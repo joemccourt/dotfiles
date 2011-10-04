@@ -18,6 +18,7 @@
 
 ;; Load path
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
+(add-to-list 'load-path "~/.emacs.d/site-lisp/color-theme")
 
 ;; Markdown mode
 (autoload 'markdown-mode "markdown-mode.el"
@@ -30,3 +31,19 @@
   "Major mode for editing Ruby files" t)
 (setq auto-mode-alist
   (cons '("\\.rb" . ruby-mode) auto-mode-alist))
+
+;; Add auto-complete
+(add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete/")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/site-lisp/auto-complete//ac-dict")
+(ac-config-default)
+
+;; Set the color theme
+(require 'color-theme)
+(setq color-theme-is-global t)
+(color-theme-initialize)
+(color-theme-charcoal-black)
+
+;; Hide the toolbar
+(if window-system
+    (tool-bar-mode -1))
