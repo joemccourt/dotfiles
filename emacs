@@ -32,5 +32,18 @@
 (setq auto-mode-alist
   (cons '("\\.rb" . ruby-mode) auto-mode-alist))
 
+;; Add auto-complete
+(add-to-list 'load-path "/Users/cspickert/.dotfiles/emacs.d/")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "/Users/cspickert/.dotfiles/emacs.d//ac-dict")
+(ac-config-default)
+
 ;; Set the color theme
-(load-library "color-theme")
+(require 'color-theme)
+(setq color-theme-is-global t)
+(color-theme-initialize)
+(color-theme-charcoal-black)
+
+;; Hide the toolbar
+(if window-system
+    (tool-bar-mode -1))
