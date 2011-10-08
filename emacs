@@ -1,5 +1,5 @@
 ;; Cameron Spickert
-;; March 17, 2010
+;; October 4, 2011
 
 ;; Tab behavior
 (setq-default standard-indent 2)
@@ -24,13 +24,33 @@
 (autoload 'markdown-mode "markdown-mode.el"
   "Major mode for editing Markdown files" t)
 (setq auto-mode-alist
-  (cons '("\\.md" . markdown-mode) auto-mode-alist))
+      (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
 ;; Ruby mode
 (autoload 'ruby-mode "ruby-mode.el"
   "Major mode for editing Ruby files" t)
 (setq auto-mode-alist
-  (cons '("\\.rb" . ruby-mode) auto-mode-alist))
+      (cons '("\\.rb" . ruby-mode) auto-mode-alist))
+
+;; Php mode
+(autoload 'php-mode "php-mode/php-mode.el"
+  "Major mode for editing PHP files" t)
+(add-to-list 'auto-mode-alist '("\\.php" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc" . php-mode))
+
+;; CSS mode
+(autoload 'css-mode "css-mode.el"
+  "Major mode for editing CSS files" t)
+(add-to-list 'auto-mode-alist '("\\.css" . css-mode))
+
+;; From: http://www.stokebloke.com/wordpress/2008/03/21/css-mode-indent-buffer-fix/
+(setq cssm-indent-level 4)
+(setq cssm-newline-before-closing-bracket t)
+(setq cssm-indent-function #'cssm-c-style-indenter)
+(setq cssm-mirror-mode nil)
+
+;; nXhtml
+;; (load (expand-file-name "~/.emacs.d/site-lisp/nxhtml/autostart"))
 
 ;; Add auto-complete
 (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete/")
