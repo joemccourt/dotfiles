@@ -43,6 +43,11 @@
   "Major mode for editing CSS files" t)
 (add-to-list 'auto-mode-alist '("\\.css" . css-mode))
 
+;; Haml mode
+(autoload 'haml-mode "haml-mode.el"
+  "Major mode for editing HAML file" t)
+(add-to-list 'auto-mode-alist '("\\.haml" . haml-mode))
+
 ;; From: http://www.stokebloke.com/wordpress/2008/03/21/css-mode-indent-buffer-fix/
 (setq cssm-indent-level 4)
 (setq cssm-newline-before-closing-bracket t)

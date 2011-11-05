@@ -7,3 +7,6 @@
 [submodule "emacs.d/site-lisp/php-mode"]
 	path = emacs.d/site-lisp/php-mode
 	url = git://github.com/ejmr/php-mode.git
+[submodule "emacs.d/site-lisp/haml-mode"]
+	path = emacs.d/site-lisp/haml-mode
+	url = https://github.com/nex3/haml-mode
