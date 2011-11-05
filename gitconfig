@@ -28,3 +28,5 @@
 [user]
 	name = Cameron Spickert
 	email = cameron@aviary.com
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
