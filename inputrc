@@ -26,3 +26,9 @@ set editing-mode emacs
 
 # Show ambiguous completions with one tab
 set show-all-if-ambiguous on
+
+# Append a slash to symlinked directory names on completion
+set mark-symlinked-directories on
+
+# Show extra stats for completion
+set visible-stats on
