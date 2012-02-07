@@ -32,6 +32,12 @@
 (setq auto-mode-alist
       (cons '("\\.rb" . ruby-mode) auto-mode-alist))
 
+;; Lua mode
+(autoload 'lua-mode "lua-mode/lua-mode.el"
+  "Major mode for editing Lua files" t)
+(setq auto-mode-alist
+      (cons '("\\.lua" . lua-mode) auto-mode-alist))
+
 ;; Php mode
 (autoload 'php-mode "php-mode/php-mode.el"
   "Major mode for editing PHP files" t)
