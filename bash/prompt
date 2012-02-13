@@ -59,7 +59,7 @@ function promptcmd {
     echo -e "$left $right"
 }
 
-export PS1="» "
+export PS1="$ "
 export PROMPT_COMMAND="promptcmd"
 
 # Resize handler
