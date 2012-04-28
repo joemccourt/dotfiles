@@ -14,7 +14,12 @@ Requirements
 1. Download XCode from the Mac App Store _or_ download and install only the latest commandline tools from the [Apple Developer site](https://developer.apple.com/downloads/index.action)
 2. Get [homebrew](http://mxcl.github.com/homebrew/)
 3. `brew install bash` (installs to /usr/local/bin)
-4. Replace `bash install.bash` below with `/usr/local/bin/bash install.bash`
+4. `sudo vim /etc/shells`
+5. Add the bash from homebrew to the list:
+
+		/usr/local/bin/bash
+6. `chsh -s /usr/local/bin/bash`
+7. Open a new terminal window or restart the app
 
 Installation
 ------------
@@ -32,6 +37,14 @@ skipping or aborting the installation.
 
 I recommend moving any existing shell configuration into ~/.localrc,
 which will be sourced if it exists.
+
+### Sensible OS X defaults
+
+When setting up a new Mac, you may want to set some sensible OS X defaults:
+
+```bash
+./.osx
+```
 
 Environment
 -----------
