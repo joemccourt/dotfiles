@@ -1,12 +1,20 @@
-Cameron's Dot Files
+Chris' Dot Files
 ===================
+Forked from [cspicker/dotfiles](https://github.com/cspicker/dotfiles).
 
-Forked from [ryanb/dotfiles](https://github.com/ryanb/dotfiles).
+…in turn forked from [ryanb/dotfiles](https://github.com/ryanb/dotfiles).
 
 Requirements
 ------------
 
 1. Bash 4+ (and bash_completion, if desired)
+
+### Chris' idiot-proof pre-installation on OSX
+
+1. Download XCode from the Mac App Store _or_ download and install only the latest commandline tools from the [Apple Developer site](https://developer.apple.com/downloads/index.action)
+2. Get [homebrew](http://mxcl.github.com/homebrew/)
+3. `brew install bash` (installs to /usr/local/bin)
+4. Replace `bash install.bash` below with `/usr/local/bin/bash install.bash`
 
 Installation
 ------------
@@ -28,9 +36,11 @@ which will be sourced if it exists.
 Environment
 -----------
 
-I have used these files on Mac, Linux and FreeBSD systems. I recommend
+> I have used these files on Mac, Linux and FreeBSD systems. I recommend
 putting any system-specific configuration, as well as anything else
 you don't want in your repo in ~/.localrc.
+
+-- @cspicker
 
 Features
 --------
@@ -41,3 +51,4 @@ Features
 * Some helpful aliases (including git)
 * Configuration files for tmux, screen and the python interpreter
 * Mac-friendly inputrc file
+* OSX settings scripted (from @mathiasbynens)
