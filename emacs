@@ -1,5 +1,5 @@
 ;; Cameron Spickert
-;; March 17, 2010
+;; October 4, 2011
 
 ;; Tab behavior
 (setq-default standard-indent 2)
@@ -19,14 +19,6 @@
 ;; Load path
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
 
-;; Markdown mode
-(autoload 'markdown-mode "markdown-mode.el"
-  "Major mode for editing Markdown files" t)
-(setq auto-mode-alist
-  (cons '("\\.md" . markdown-mode) auto-mode-alist))
-
-;; Ruby mode
-(autoload 'ruby-mode "ruby-mode.el"
-  "Major mode for editing Ruby files" t)
-(setq auto-mode-alist
-  (cons '("\\.rb" . ruby-mode) auto-mode-alist))
+;; Hide the toolbar
+(if window-system
+    (tool-bar-mode -1))

@@ -3,3 +3,5 @@
 *~
 .*.swp
 localrc
+*.elc
+*.dat
