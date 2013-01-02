@@ -8,6 +8,7 @@ declare -a all_paths=(
     $(command -p getconf PATH | sed 's/:/ /g')	# System path
     $HOME/bin
     $HOME/.gem/ruby/$(ruby --version | cut -d' ' -f2 | cut -c-3)/bin
+	$HOME/.rvm/bin
 )
 
 unset PATH_tmp

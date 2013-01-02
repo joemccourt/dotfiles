@@ -1,6 +1,6 @@
 Chris' Dot Files
 ===================
-Forked from [cspicker/dotfiles](https://github.com/cspicker/dotfiles).
+Forked from [cspickert/dotfiles](https://github.com/cspickert/dotfiles).
 
 …in turn forked from [ryanb/dotfiles](https://github.com/ryanb/dotfiles).
 
@@ -28,7 +28,7 @@ Simply run the following commands:
 
     git clone --recursive git://github.com/cbosco/dotfiles ~/.dotfiles
     cd ~/.dotfiles
-    bash install.bash
+    ./install.bash
 
 The install script will create symbolic links to files in your home
 directory (.bashrc, .bash_profile, etc.). If files exist at these
@@ -53,14 +53,13 @@ Environment
 putting any system-specific configuration, as well as anything else
 you don't want in your repo in ~/.localrc.
 
--- @cspicker
+-- @cspickert
 
 Features
 --------
 
 * A nice prompt
 * Bash history synchronization for multiple shells (via exploiting PROMPT_COMMAND)
-* A place to put emacs config and user-provided bash completions
 * Some helpful aliases (including git)
 * Configuration files for tmux, screen and the python interpreter
 * Mac-friendly inputrc file
