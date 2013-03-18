@@ -28,7 +28,7 @@ Simply run the following commands:
 
     git clone --recursive git://github.com/cbosco/dotfiles ~/.dotfiles
     cd ~/.dotfiles
-    ./install.bash
+    /usr/local/bin/bash ./install.bash
 
 The install script will create symbolic links to files in your home
 directory (.bashrc, .bash_profile, etc.). If files exist at these
