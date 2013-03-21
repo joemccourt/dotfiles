@@ -28,7 +28,7 @@
 	excludesfile = /Users/cameron/.gitignore_global
 [user]
 	name = Chris Bosco
-	email = chris@aviary.com
+	email = chris@masterstreet.com
 [difftool "Kaleidoscope"]
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool "sourcetree"]
