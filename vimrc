@@ -49,6 +49,9 @@ set incsearch " Highlight dynamically as pattern is typed.
 set ignorecase " Ignore case of searches.
 set smartcase " Ignore 'ignorecase' if search patter contains uppercase characters.
 
+" Show special characters
+:set listchars=tab:>-,trail:~,extends:>,precedes:<
+:set list
 
 "" directories
 "" set backup locations and enable
