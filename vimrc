@@ -41,6 +41,7 @@ set autoindent " Copy indent from last line when starting new line
 set smarttab " Indent further in or out based on previous line
 set tabstop=4 " Set tab stop to 4
 set shiftwidth=4 " Set shift width to 4
+set expandtab
 
 " searching
 set hlsearch " Highlight searches
