@@ -5,3 +5,5 @@
 localrc
 *.elc
 *.dat
+vim/vim
+bash/bash
