@@ -1,0 +1,44 @@
+# FILE-TYPE =fb
+# where f is the foreground color
+# b is the background color
+# So to setup Directory color blue setup DIR to ex
+# Default for all
+# Color code (fb)
+# a     black
+# b     red
+# c     green
+# d     brown
+# e     blue
+# f     magenta
+# g     cyan
+# h     light grey
+# A     bold black, usually shows up as dark grey
+# B     bold red
+# C     bold green
+# D     bold brown, usually shows up as yellow
+# E     bold blue
+# F     bold magenta
+# G     bold cyan
+# H     bold light grey; looks like bright white
+# x     default foreground or background
+
+# search path for cd(1)
+# CDPATH=.:$HOME
+# Colour code
+DIR=Gx
+SYM_LINK=fx
+SOCKET=Fx
+PIPE=dx
+EXE=Bx
+BLOCK_SP=Dx
+CHAR_SP=Dx
+EXE_SUID=hb
+EXE_GUID=ad
+DIR_STICKY=Ex
+DIR_WO_STICKY=Ex
+# Want to see fancy ls output? blank to disable it
+ENABLE_FANCY="-F"
+
+export LSCOLORS="$DIR$SYM_LINK$SOCKET$PIPE$EXE$BLOCK_SP$CHAR_SP$EXE_SUID$EXE_GUID$DIR_STICKY$DIR_WO_STICKY"
+
+[ "$ENABLE_FANCY" == "-F" ]

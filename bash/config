@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 source ~/.bash/prompt
+source ~/.bash/freebsd_dir_colors
 source ~/.bash/history
 
 # Unset shopts (-u)
