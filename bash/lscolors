@@ -1,3 +1,6 @@
+# colors for `ls` in FreeBSD
+# http://www.jaredlog.com/?p=56
+
 # FILE-TYPE =fb
 # where f is the foreground color
 # b is the background color
