@@ -46,6 +46,11 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ./.osx
 ```
 
+### Anything not immediately available on OSX
+
+* Bash 4 (see above)
+* tmux (get via brew)
+
 Environment
 -----------
 
