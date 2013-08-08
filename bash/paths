@@ -9,6 +9,7 @@ declare -a all_paths=(
     $HOME/bin
     $HOME/.gem/ruby/$(ruby --version | cut -d' ' -f2 | cut -c-3)/bin
 	$HOME/.rvm/bin
+	$HOME/.npm
 )
 
 unset PATH_tmp
