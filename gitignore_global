@@ -1,0 +1,19 @@
+# Vim
+*.swo
+*.swp
+*.swn
+
+# Xcode
+*.pbxuser
+*.perspective
+*.perspective3
+*.mode1v3
+*.mode2v3
+xcuserdata
+
+# Misc
+.env
+.DS_Store
+.svn
+*.swp
+.*.swp

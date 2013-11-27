@@ -25,7 +25,7 @@
 [core]
 	pager = less -FRSX
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /Users/cameron/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [user]
 	name = Chris Bosco
 	email = chris@masterstreet.com
