@@ -2,7 +2,7 @@
 
 # Configure colors:
 function fg_reset { 
-    echo '\e[0m'; 
+    echo '\x1B[0m'; 
 }
 
 colors="black red green yellow blue purple cyan white"
@@ -13,7 +13,7 @@ for color in $colors; do
 	fname=`[ -z $style ] && echo fg_$color || echo fg_${style}_${color}`
 	fun=`echo 'function' "$fname" '{
 	    [ -z "$1" ] && return 1;
-	    echo -e "\e['"$j;${i}m"'"$1"'"$(fg_reset)"'";
+	    echo -e "\x1B['"$j;${i}m"'"$1"'"$(fg_reset)"'";
 	    }'`
 	eval $fun
     done
@@ -54,8 +54,8 @@ function promptcmd {
     curdir=$(fg_green "$curdir")
     left="$user at $host in $curdir"
     # Export
-    # export PS1="\[\e[1;32m\]$left $curdir $right\n$\[\e[0m\] "
-    # export PS1="\[\e[1;32m\][$user@$host \W]\$\[\e[0m\] "
+    # export PS1="\[\x1B[1;32m\]$left $curdir $right\n$\[\x1B[0m\] "
+    # export PS1="\[\x1B[1;32m\][$user@$host \W]\$\[\x1B[0m\] "
     echo -e "$left $right"
 }
 
@@ -65,7 +65,7 @@ export PROMPT_COMMAND="promptcmd"
 # Resize handler
 function resized_window {
     cols=$(stty size)
-    echo -e "\e[1A\e[${cols}D\e[K$(promptcmd)"
+    echo -e "\x1B[1A\x1B[${cols}D\x1B[K$(promptcmd)"
 }
 
 # Not working yet
