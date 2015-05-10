@@ -3,7 +3,7 @@ set nocompatible
 
 " Turn on 256 colors
 "set t_Co=256
-set t_Co=16
+set t_Co=256
 " Turn out the lights
 set background=dark
 syntax on
