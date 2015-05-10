@@ -27,8 +27,8 @@
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore_global
 [user]
-	name = Chris Bosco
-	email = cbosco@ondeck.com
+	name = Joe McCourt
+	email = joe.j.mccourt@gmail.com
 [difftool "Kaleidoscope"]
 	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool "sourcetree"]
