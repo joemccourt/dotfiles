@@ -1,8 +1,9 @@
 Chris' Dot Files
 ===================
-Forked from [cspickert/dotfiles](https://github.com/cspickert/dotfiles).
 
-…in turn forked from [ryanb/dotfiles](https://github.com/ryanb/dotfiles).
+Forked from [cbosco/dotfiles](https://github.com/cbosco/dotfiles).
+...in turn Forked from [cspickert/dotfiles](https://github.com/cspickert/dotfiles).
+...in turn in turn forked from [ryanb/dotfiles](https://github.com/ryanb/dotfiles).
 
 Requirements
 ------------
@@ -26,7 +27,7 @@ Installation
 
 Simply run the following commands:
 
-    git clone --recursive git://github.com/cbosco/dotfiles ~/.dotfiles
+    git clone --recursive git://github.com/joemccourt/dotfiles ~/.dotfiles
     cd ~/.dotfiles
     /usr/local/bin/bash ./install.bash
 
